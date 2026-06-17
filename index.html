@@ -1,0 +1,115 @@
+<!-- ФАЙЛ: index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Барбершоп Redjii — мужские стрижки в центре</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="/" class="logo">Redjii</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
+          <li class="nav__item"><a href="#masters" class="nav__link">Мастера</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn--accent" id="cta-button">Записаться</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section__title">О Барбершопе</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>Redjii — это место, где рождается стиль. Мы сочетаем классические техники с современными трендами. Атмосфера брутальности и качества в каждой детали.</p>
+          </div>
+          <div class="about__image">
+            <img src="https://via.placeholder.com/800x600" alt="Интерьер барбершопа Redjii">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h2 class="section__title">Услуги</h2>
+        <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__image">
+              <img src="https://via.placeholder.com/400x300" alt="Мужская стрижка">
+            </div>
+            <h3 class="service-card__title">Мужская стрижка</h3>
+            <p class="service-card__price">от 2 000 ₽</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__image">
+              <img src="https://via.placeholder.com/400x300" alt="Оформление бороды">
+            </div>
+            <h3 class="service-card__title">Борода и усы</h3>
+            <p class="service-card__price">от 1 500 ₽</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__image">
+              <img src="https://via.placeholder.com/400x300" alt="Королевское бритьё">
+            </div>
+            <h3 class="service-card__title">Королевское бритьё</h3>
+            <p class="service-card__price">от 2 500 ₽</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="masters" class="section masters">
+      <div class="container">
+        <h2 class="section__title">Наши мастера</h2>
+        <div class="masters__grid">
+          <figure class="master-card">
+            <img src="https://via.placeholder.com/300x400" alt="Мастер Алексей" class="master-card__photo">
+            <figcaption class="master-card__info">
+              <span class="master-card__name">Алексей</span>
+              <span class="master-card__role">Топ-барбер</span>
+            </figcaption>
+          </figure>
+          <figure class="master-card">
+            <img src="https://via.placeholder.com/300x400" alt="Мастер Дмитрий" class="master-card__photo">
+            <figcaption class="master-card__info">
+              <span class="master-card__name">Дмитрий</span>
+              <span class="master-card__role">Специалист по бородам</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section contacts">
+      <div class="container">
+        <h2 class="section__title">Контакты</h2>
+        <div class="contacts__content">
+          <p class="contacts__address">ул. Примерная, д. 10, Москва</p>
+          <p class="contacts__phone">+7 (999) 123-45-67</p>
+          <p class="contacts__hours">Ежедневно: 10:00 – 22:00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__copy">&copy; 2026 Барбершоп Redjii. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

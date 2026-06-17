@@ -1,0 +1,308 @@
+/* ФАЙЛ: style.css */
+/* ===== CSS Переменные ===== */
+:root {
+  --color-bg: #121212;
+  --color-surface: #1e1e1e;
+  --color-accent: #ff0000;
+  --color-text: #f5f5f5;
+  --color-text-muted: #aaaaaa;
+  --font-family: 'Montserrat', sans-serif;
+  --spacing-section: 80px;
+  --header-height: 70px;
+  --container-max: 1200px;
+}
+
+/* ===== Сброс и базовые стили ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== Утилиты ===== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: var(--spacing-section) 0;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color: var(--color-text);
+}
+
+.section__title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+  margin: 1rem auto 0;
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition: opacity 0.2s ease;
+}
+
+.btn--accent:hover {
+  opacity: 0.85;
+}
+
+/* ===== Шапка (фиксированная) ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: rgba(18, 18, 18, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+/* Отступ для контента, чтобы не заезжал под фиксированную шапку */
+main {
+  margin-top: var(--header-height);
+}
+
+/* ===== О нас ===== */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about__text {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.about__image img {
+  border-radius: 4px;
+}
+
+/* ===== Услуги ===== */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card__image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.service-card__title {
+  font-size: 1.2rem;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.service-card__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1.2rem;
+}
+
+/* ===== Мастера ===== */
+.masters__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.master-card {
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.master-card__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.master-card__info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.master-card__name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.master-card__role {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== Контакты ===== */
+.contacts__content {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* ===== Подвал ===== */
+.footer {
+  background-color: var(--color-surface);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer__copy {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== Медиа-запросы (Mobile-first) ===== */
+@media (max-width: 768px) {
+  :root {
+    --spacing-section: 60px;
+  }
+
+  .header__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .header {
+    position: relative; /* На мобилке не фиксируем, чтобы не терять пространство */
+    height: auto;
+    backdrop-filter: none;
+    background-color: var(--color-bg);
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  .nav__list {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn--accent {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section__title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .masters__grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+}
